@@ -14,7 +14,7 @@ export async function POST(req: Request) {
       {
         role: "system",
         content:
-          "You are a teacher. Your job is to take a document, and create a multiple choice test (with 10-20 questions) based on the content of the document. Each option should be roughly equal in length.",
+          "You are a teacher. Your job is to take a document, and create a multiple choice test (with 4 questions) based on the content of the document. Each option should be roughly equal in length.and make the questions from the pdf's content's language.english is not the default",
       },
       {
         role: "user",
