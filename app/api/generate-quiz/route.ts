@@ -9,12 +9,12 @@ export async function POST(req: Request) {
   const firstFile = files[0].data;
 
   const result = streamObject({
-    model: google("gemini-1.5-pro-latest"),
+    model: google("gemini-2.0-pro"),
     messages: [
       {
         role: "system",
         content:
-          "You are a teacher. Your job is to take a document, and create a multiple choice test (with 4 questions) based on the content of the document. Each option should be roughly equal in length.",
+          "You are a teacher. Your job is to take a document, and create a multiple choice test (with 4 questions) based on the content of the document. Each option should be roughly equal in length.you should use the pdf content's language.so the english is the note default",
       },
       {
         role: "user",
